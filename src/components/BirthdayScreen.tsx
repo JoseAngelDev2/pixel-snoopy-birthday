@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Music, MessageCircle } from "lucide-react";
+import { Music, MessageCircle, Car } from "lucide-react";
 import snoopyHouse from "@/assets/snoopy-house.png";
 import cloud from "@/assets/cloud.png";
 import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Hoy es un buen día para ser feliz ✨",
-  "Snoopy dice: Cree en ti, siempre 🌈",
-  "Snoopy dice: Eres la sonrisa del día 💫",
-  "Snoopy dice: Eres única y maravillosa 💖",
+  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
+  "Snoopy dice: Que no Ganamos una en Among uS AJJAJJA",
+  "Snoopy dice: Es bonito pasar tiempo contigo. 👀",
+  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
   "Snoopy dice: Tu luz brilla más cada día 🌟",
   "Snoopy dice: Haz que cada momento cuente 🎯",
   "Snoopy dice: Eres más fuerte de lo que crees 💪",
@@ -28,7 +28,7 @@ const phrases = [
   "Snoopy dice: Tienes el poder de cambiar tu día 🌞",
   "Snoopy dice: Brilla sin miedo, el mundo necesita tu luz 💡",
   "Snoopy dice: Eres magia en movimiento ✨",
-  "Snoopy dice: Eres mi persona favorita 🐾",
+  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
   "Snoopy dice: Cada risa tuya hace el día más bonito 💕",
   "Snoopy dice: El universo sonríe cuando tú lo haces 🌌",
   "Snoopy dice: Tienes la chispa que enciende los días grises 🔥",
@@ -48,12 +48,15 @@ const phrases = [
   "Snoopy dice: Nunca dejes de soñar, porque los sueños te llevan lejos ☁️",
   "Snoopy dice: Eres el motivo de muchas sonrisas 🩷",
   "Snoopy dice: Los días son mejores cuando tú estás 🌻",
-  "Snoopy dice: Cada paso tuyo deja una huella de amor 💖",
+  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
   "Snoopy dice: La felicidad te queda perfecta 😊",
-  "Snoopy dice: Tú haces que la vida sea más dulce 🍰",
-  "Snoopy dice: Sigue caminando, lo mejor está adelante 🚶‍♀️✨"
+  "Snoopy dice: hay que jugar!! 😭",
+  "Snoopy dice: disfruta tu dia!!! JAJAJJAJA 🚶‍♀️✨"
 ];
 
+const Cartas = [
+  "Hoy el cielo se ve más bonito, y no es casualidad… ¡es porque es tu día, Karen! 🌈✨ Espero que este nuevo año de vida te traiga miles de sonrisas, sueños cumplidos y momentos felices que nunca olvides.                               - Angel",
+];
 
 
 export const BirthdayScreen = () => {
@@ -66,15 +69,24 @@ export const BirthdayScreen = () => {
     const availablePhrases = phrases.filter(p => p !== currentPhrase);
     const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
     setCurrentPhrase(randomPhrase);
-    const audio = new Audio("audio/Voicy_Snoopy Sound 5.mp3");
-    audio.play().catch(() => {});
   };
+
+  const getRandomCarta = () =>
+  {
+    const randomPhrase = Math.floor(Math.random() * Cartas.length);
+    return Cartas[randomPhrase];
+  }
 
 
   const toggleMusic = () => {
-    setIsPlaying(!isPlaying);
-    const audio = new Audio("audio/theyre-eating-the-dogs-snoopy-sound-track (1).mp3");
-    audio.play().catch(() => {});
+   useEffect(() => {
+  const audio = new Audio("audio/theyre-eating-the-dogs-snoopy-sound-track (1).mp3");
+  audio.loop = true;
+  audio.play().catch(() => {});
+  setIsPlaying(true);
+}, []);
+
+
     // In a real implementation, you would control audio playback here
   };
 
@@ -191,7 +203,7 @@ export const BirthdayScreen = () => {
               💌 Mensaje especial
             </h2>
             <p className="text-foreground text-xs sm:text-sm font-pixel leading-relaxed">
-              Karen, que este día esté lleno de alegría, risas y momentos inolvidables. ¡Eres increíble! 🎂✨
+              {getRandomCarta()}
             </p>
           </Card>
         </div>
