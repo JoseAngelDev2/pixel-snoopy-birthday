@@ -54,9 +54,8 @@ const phrases = [
   "Snoopy dice: disfruta tu dia!!! JAJAJJAJA 🚶‍♀️✨"
 ];
 
-const Cartas = [
-  "Hoy el cielo se ve más bonito, y no es casualidad… ¡es porque es tu día, Karen! 🌈✨ Espero que este nuevo año de vida te traiga miles de sonrisas, sueños cumplidos y momentos felices que nunca olvides.                               - Angel",
-];
+
+const carta = "Hoy el cielo se ve más bonito, y no es casualidad… ¡es porque es tu día, Karen! 🌈✨ Espero que este nuevo año de vida te traiga miles de sonrisas, sueños cumplidos y momentos felices que nunca olvides.                               - Angel"
 
 
 export const BirthdayScreen = () => {
@@ -65,17 +64,12 @@ export const BirthdayScreen = () => {
   const [showMessage, setShowMessage] = useState(false);
 
   const getRandomPhrase = () => {
-    
+    const audio = new Audio("audio/Voicy_Snoopy Sound 4.mp3");
+    audio.play().catch(() => {});
     const availablePhrases = phrases.filter(p => p !== currentPhrase);
     const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
     setCurrentPhrase(randomPhrase);
   };
-
-  const getRandomCarta = () =>
-  {
-    const randomPhrase = Math.floor(Math.random() * Cartas.length);
-    return Cartas[randomPhrase];
-  }
 
 
   const toggleMusic = () => {
@@ -203,7 +197,7 @@ export const BirthdayScreen = () => {
               💌 Mensaje especial
             </h2>
             <p className="text-foreground text-xs sm:text-sm font-pixel leading-relaxed">
-              {getRandomCarta()}
+              {carta}
             </p>
           </Card>
         </div>
