@@ -56,55 +56,56 @@ export const BirthdayScreen = () => {
       <img src={cloud} alt="" className="absolute top-24 left-1/3 w-36 opacity-60 animate-float" style={{ imageRendering: "pixelated", animationDelay: "2s" }} />
 
       {/* Main content */}
-      <div className="relative z-20 pt-20 pb-8 px-4">
+      <div className="relative z-20 pt-16 pb-8 px-4 max-w-4xl mx-auto">
         {/* Title */}
-        <h1 className="text-center text-primary text-3xl md:text-5xl lg:text-6xl font-pixel mb-4 pixel-shadow animate-bounce-in">
+        <h1 className="text-center text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-pixel mb-3 sm:mb-4 pixel-shadow animate-bounce-in leading-tight">
           🎉 FELIZ<br />CUMPLEAÑOS<br />KAREN 🎂
         </h1>
 
-        <p className="text-center text-accent text-sm md:text-base font-pixel mb-8 animate-fade-in">
+        <p className="text-center text-accent text-xs sm:text-sm md:text-base font-pixel mb-6 sm:mb-8 animate-fade-in px-4">
           Hoy es un buen día para ser feliz ✨
         </p>
 
-        {/* Snoopy with speech bubble */}
-        <div className="flex justify-center items-center mb-12 relative">
-          <div className="relative">
-            <img
-              src={snoopyHouse}
-              alt="Snoopy"
-              className="w-48 md:w-64 lg:w-80 mx-auto animate-bounce-in"
-              style={{ imageRendering: "pixelated", animationDelay: "0.3s" }}
-            />
-            
-            {/* Speech bubble */}
-            <Card className="absolute -right-4 md:-right-8 top-0 bg-card border-4 border-foreground pixel-shadow max-w-xs p-4 animate-bounce-in" style={{ animationDelay: "0.6s" }}>
-              <div className="absolute -left-3 top-6 w-0 h-0 border-t-[12px] border-t-transparent border-r-[20px] border-r-card border-b-[12px] border-b-transparent" />
-              <p className="text-foreground text-xs md:text-sm font-pixel leading-relaxed">
-                {currentPhrase}
-              </p>
-            </Card>
-          </div>
+        {/* Speech bubble - Now above Snoopy on mobile */}
+        <div className="flex justify-center mb-4 sm:mb-6 px-4 animate-bounce-in" style={{ animationDelay: "0.3s" }}>
+          <Card className="bg-card border-4 border-foreground pixel-shadow w-full max-w-sm p-4 sm:p-5 relative">
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-card" />
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[22px] border-t-foreground" style={{ zIndex: -1 }} />
+            <p className="text-foreground text-xs sm:text-sm font-pixel leading-relaxed text-center">
+              {currentPhrase}
+            </p>
+          </Card>
+        </div>
+
+        {/* Snoopy */}
+        <div className="flex justify-center items-center mb-6 sm:mb-8">
+          <img
+            src={snoopyHouse}
+            alt="Snoopy"
+            className="w-56 sm:w-64 md:w-72 lg:w-80 mx-auto animate-bounce-in"
+            style={{ imageRendering: "pixelated", animationDelay: "0.5s" }}
+          />
         </div>
 
         {/* New phrase button */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-12 sm:mb-16">
           <Button
             onClick={getRandomPhrase}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-pixel text-xs md:text-sm px-6 py-6 pixel-shadow transition-all hover:scale-105"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-pixel text-xs sm:text-sm px-6 sm:px-8 py-5 sm:py-6 pixel-shadow transition-all hover:scale-105"
           >
             ✚ Nueva frase
           </Button>
         </div>
 
         {/* Walking Snoopy characters */}
-        <div className="relative h-32 md:h-40">
-          <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-pixel-grass border-t-4 border-foreground">
+        <div className="relative h-28 sm:h-32 md:h-40">
+          <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 md:h-32 bg-pixel-grass border-t-4 border-foreground">
             {/* Pixel flowers */}
-            <div className="absolute bottom-2 left-[10%] text-2xl">🌸</div>
-            <div className="absolute bottom-3 left-[25%] text-xl">🌼</div>
-            <div className="absolute bottom-2 right-[15%] text-2xl">🌸</div>
-            <div className="absolute bottom-3 right-[30%] text-xl">🌺</div>
-            <div className="absolute bottom-4 left-[50%] text-2xl">🌼</div>
+            <div className="absolute bottom-2 left-[10%] text-lg sm:text-xl md:text-2xl">🌸</div>
+            <div className="absolute bottom-2 sm:bottom-3 left-[25%] text-base sm:text-lg md:text-xl">🌼</div>
+            <div className="absolute bottom-2 right-[15%] text-lg sm:text-xl md:text-2xl">🌸</div>
+            <div className="absolute bottom-2 sm:bottom-3 right-[30%] text-base sm:text-lg md:text-xl">🌺</div>
+            <div className="absolute bottom-3 sm:bottom-4 left-[50%] text-lg sm:text-xl md:text-2xl">🌼</div>
           </div>
           
           <WalkingSnoopy startPosition={10} duration={15} delay={0} />
@@ -114,33 +115,33 @@ export const BirthdayScreen = () => {
       </div>
 
       {/* Control buttons */}
-      <div className="fixed bottom-6 right-6 flex gap-3 z-30">
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 flex gap-2 sm:gap-3 z-30">
         <Button
           onClick={() => setShowMessage(!showMessage)}
           size="icon"
-          className="w-14 h-14 rounded-full bg-pixel-cloud hover:bg-pixel-cloud/80 border-4 border-foreground pixel-shadow"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pixel-cloud hover:bg-pixel-cloud/80 border-3 sm:border-4 border-foreground pixel-shadow"
         >
-          <MessageCircle className="w-6 h-6 text-foreground" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
         </Button>
         <Button
           onClick={toggleMusic}
           size="icon"
-          className={`w-14 h-14 rounded-full border-4 border-foreground pixel-shadow ${
+          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full border-3 sm:border-4 border-foreground pixel-shadow ${
             isPlaying ? "bg-primary hover:bg-primary/80" : "bg-primary/50 hover:bg-primary/70"
           }`}
         >
-          <Music className="w-6 h-6 text-primary-foreground" />
+          <Music className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
         </Button>
       </div>
 
       {/* Optional message overlay */}
       {showMessage && (
         <div className="fixed inset-0 bg-foreground/50 flex items-center justify-center z-40 p-4" onClick={() => setShowMessage(false)}>
-          <Card className="bg-card border-4 border-foreground pixel-shadow p-6 md:p-8 max-w-md">
-            <h2 className="text-primary text-xl md:text-2xl font-pixel mb-4">
+          <Card className="bg-card border-4 border-foreground pixel-shadow p-5 sm:p-6 md:p-8 max-w-sm sm:max-w-md mx-4">
+            <h2 className="text-primary text-lg sm:text-xl md:text-2xl font-pixel mb-3 sm:mb-4">
               💌 Mensaje especial
             </h2>
-            <p className="text-foreground text-xs md:text-sm font-pixel leading-relaxed">
+            <p className="text-foreground text-xs sm:text-sm font-pixel leading-relaxed">
               Karen, que este día esté lleno de alegría, risas y momentos inolvidables. ¡Eres increíble! 🎂✨
             </p>
           </Card>
