@@ -57,6 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        pixel: {
+          sky: "hsl(var(--pixel-sky))",
+          grass: "hsl(var(--pixel-grass))",
+          pink: "hsl(var(--pixel-pink))",
+          yellow: "hsl(var(--pixel-yellow))",
+          red: "hsl(var(--pixel-red))",
+          purple: "hsl(var(--pixel-purple))",
+          cloud: "hsl(var(--pixel-cloud))",
+        },
+      },
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -8,50 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Pixel Art Birthday Theme - Pastel Retro Colors */
+    --background: 200 100% 85%;
+    --foreground: 240 100% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 240 100% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 100% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 330 100% 71%;
+    --primary-foreground: 240 100% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 240 100% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 240 20% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 100% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 20% 80%;
+    --input: 240 20% 80%;
+    --ring: 330 100% 71%;
 
-    --radius: 0.5rem;
+    --radius: 0.125rem;
+
+    /* Custom pixel art colors */
+    --pixel-sky: 200 100% 85%;
+    --pixel-grass: 120 60% 50%;
+    --pixel-pink: 330 100% 71%;
+    --pixel-yellow: 48 100% 50%;
+    --pixel-red: 0 100% 65%;
+    --pixel-purple: 270 50% 60%;
+    --pixel-cloud: 0 0% 98%;
+    
+    /* Gradient backgrounds */
+    --gradient-gift: linear-gradient(135deg, hsl(270 50% 60%), hsl(300 50% 60%));
+    --gradient-button: linear-gradient(180deg, hsl(48 100% 55%), hsl(48 100% 45%));
+    
+    /* Pixel shadows */
+    --shadow-pixel: 4px 4px 0px hsl(240 100% 20% / 0.3);
+    --glow-yellow: 0 0 20px hsl(48 100% 50% / 0.6);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -101,5 +112,68 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Pixel art utilities */
+  .pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+  
+  .pixel-shadow {
+    box-shadow: var(--shadow-pixel);
+  }
+  
+  .pixel-border {
+    border: 3px solid hsl(var(--foreground));
+    border-radius: var(--radius);
+  }
+  
+  .glow-yellow {
+    box-shadow: var(--glow-yellow);
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes bounce-in {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  @keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  .animate-confetti {
+    animation: confetti-fall linear forwards;
   }
 }
