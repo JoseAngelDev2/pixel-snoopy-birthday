@@ -10,10 +10,10 @@ export const GiftScreen = ({ onOpen }: GiftScreenProps) => {
   const [isOpening, setIsOpening] = useState(false);
 
   const handleOpen = () => {
+    
+    const audio = new Audio("audio/mister-snoopy.mp3");
     setIsOpening(true);
-    // Play opening sound (8-bit style)
-    const audio = new Audio("data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIGGa87OicTgwOUKXh8LdjHQU2kdXw0H8qBSh+zPLaizsIHGS57+qhUQ0KRKT=");
-    audio.play().catch(() => {}); // Ignore if autoplay is blocked
+    audio.play().catch(() => {});
     
     setTimeout(() => {
       onOpen();

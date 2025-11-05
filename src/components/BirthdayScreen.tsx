@@ -8,16 +8,53 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Hoy es un buen día para ser feliz ✨",
-  "Cree en ti, siempre 🌈",
-  "Eres la sonrisa del día 💫",
-  "Eres única y maravillosa 💖",
-  "Tu luz brilla más cada día 🌟",
-  "Haz que cada momento cuente 🎯",
-  "Eres más fuerte de lo que crees 💪",
-  "La vida es bella, como tú 🌸",
-  "Sigue brillando, estrella 🌠",
+  "Snoopy dice: Hoy es un buen día para ser feliz ✨",
+  "Snoopy dice: Cree en ti, siempre 🌈",
+  "Snoopy dice: Eres la sonrisa del día 💫",
+  "Snoopy dice: Eres única y maravillosa 💖",
+  "Snoopy dice: Tu luz brilla más cada día 🌟",
+  "Snoopy dice: Haz que cada momento cuente 🎯",
+  "Snoopy dice: Eres más fuerte de lo que crees 💪",
+  "Snoopy dice: La vida es bella, como tú 🌸",
+  "Snoopy dice: Sigue brillando, estrella 🌠",
+  "Snoopy dice: Nunca te rindas, lo mejor está por venir 🚀",
+  "Snoopy dice: Tu alegría es contagiosa 😄",
+  "Snoopy dice: El mundo es mejor contigo 💕",
+  "Snoopy dice: Sonríe, porque lo mereces 😌",
+  "Snoopy dice: Incluso los días grises tienen su encanto ☁️",
+  "Snoopy dice: El esfuerzo de hoy será tu orgullo mañana 🏆",
+  "Snoopy dice: No importa lo lento, mientras no te detengas 🐢",
+  "Snoopy dice: Confía en el proceso, todo llega a su tiempo ⏳",
+  "Snoopy dice: Tienes el poder de cambiar tu día 🌞",
+  "Snoopy dice: Brilla sin miedo, el mundo necesita tu luz 💡",
+  "Snoopy dice: Eres magia en movimiento ✨",
+  "Snoopy dice: Eres mi persona favorita 🐾",
+  "Snoopy dice: Cada risa tuya hace el día más bonito 💕",
+  "Snoopy dice: El universo sonríe cuando tú lo haces 🌌",
+  "Snoopy dice: Tienes la chispa que enciende los días grises 🔥",
+  "Snoopy dice: Nunca olvides lo increíble que eres 💎",
+  "Snoopy dice: Tu ternura es un superpoder 🧸",
+  "Snoopy dice: La vida contigo tiene mejor banda sonora 🎶",
+  "Snoopy dice: Hoy es tu día para brillar más que nunca 💖",
+  "Snoopy dice: Convierte tus sueños en metas y tus metas en realidad 🚀",
+  "Snoopy dice: Todo gran logro empezó con una pequeña acción 🌱",
+  "Snoopy dice: A veces descansar también es avanzar ☕",
+  "Snoopy dice: Cree que puedes, y ya estarás a medio camino 🌄",
+  "Snoopy dice: Tu actitud puede cambiar cualquier día 🌈",
+  "Snoopy dice: Eres más especial de lo que imaginas 💫",
+  "Snoopy dice: Tu energía ilumina todo 💫",
+  "Snoopy dice: Tu corazón es puro arte 🎨",
+  "Snoopy dice: Hoy mereces todo lo bonito del mundo 🌷",
+  "Snoopy dice: Nunca dejes de soñar, porque los sueños te llevan lejos ☁️",
+  "Snoopy dice: Eres el motivo de muchas sonrisas 🩷",
+  "Snoopy dice: Los días son mejores cuando tú estás 🌻",
+  "Snoopy dice: Cada paso tuyo deja una huella de amor 💖",
+  "Snoopy dice: La felicidad te queda perfecta 😊",
+  "Snoopy dice: Tú haces que la vida sea más dulce 🍰",
+  "Snoopy dice: Sigue caminando, lo mejor está adelante 🚶‍♀️✨"
 ];
+
+
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
@@ -25,13 +62,19 @@ export const BirthdayScreen = () => {
   const [showMessage, setShowMessage] = useState(false);
 
   const getRandomPhrase = () => {
+    
     const availablePhrases = phrases.filter(p => p !== currentPhrase);
     const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
     setCurrentPhrase(randomPhrase);
+    const audio = new Audio("audio/Voicy_Snoopy Sound 5.mp3");
+    audio.play().catch(() => {});
   };
+
 
   const toggleMusic = () => {
     setIsPlaying(!isPlaying);
+    const audio = new Audio("audio/theyre-eating-the-dogs-snoopy-sound-track (1).mp3");
+    audio.play().catch(() => {});
     // In a real implementation, you would control audio playback here
   };
 
@@ -96,6 +139,12 @@ export const BirthdayScreen = () => {
             ✚ Nueva frase
           </Button>
         </div>
+
+        <div>
+          <p className="text-center text-accent text-xs sm:text-sm md:text-base font-pixel mb-6 sm:mb-8 animate-fade-in px-4"> No toques los Snoopy luego se enojan 😞</p>
+        </div>
+
+        
 
         {/* Walking Snoopy characters */}
         <div className="relative h-28 sm:h-32 md:h-40">
