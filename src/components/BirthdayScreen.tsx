@@ -8,8 +8,6 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
-  "Snoopy dice: Que no Ganamos una en Among uS AJJAJJA",
   "Snoopy dice: Es bonito pasar tiempo contigo. 👀",
   "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
   "Snoopy dice: Tu luz brilla más cada día 🌟",
@@ -48,14 +46,15 @@ const phrases = [
   "Snoopy dice: Nunca dejes de soñar, porque los sueños te llevan lejos ☁️",
   "Snoopy dice: Eres el motivo de muchas sonrisas 🩷",
   "Snoopy dice: Los días son mejores cuando tú estás 🌻",
-  "Snoopy dice: Que somos Mancos en el Codm 😞 AJJAJA",
   "Snoopy dice: La felicidad te queda perfecta 😊",
   "Snoopy dice: hay que jugar!! 😭",
   "Snoopy dice: disfruta tu dia!!! JAJAJJAJA 🚶‍♀️✨"
 ];
 
 
-const carta = `No te falta nada.\n
+const carta = `
+No te falta nada.
+
 Eres una gran mujer, un amor de persona, eres trabajadora, estás preciosa, 
 te esfuerzas cada día y tu corazón es noble. No dudes de ti.`
 
