@@ -55,8 +55,9 @@ const phrases = [
 ];
 
 
-const carta = "Hoy el cielo se ve más bonito, y no es casualidad… ¡es porque es tu día, Karen! 🌈✨ Espero que este nuevo año de vida te traiga miles de sonrisas, sueños cumplidos y momentos felices que nunca olvides.                               - Angel"
-
+const carta = `No te falta nada.\n
+Eres una gran mujer, un amor de persona, eres trabajadora, estás preciosa, 
+te esfuerzas cada día y tu corazón es noble. No dudes de ti.`
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);

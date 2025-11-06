@@ -3,9 +3,9 @@ import snoopyWalk from "@/assets/snoopy-walk.png";
 import snoopyAngry from "@/assets/snoopy-angry.png";
 
 interface WalkingSnoopyProps {
-  startPosition: number; // porcentaje inicial (ej. 0)
-  duration: number; // segundos en cruzar la pantalla
-  delay: number; // segundos antes de comenzar
+  startPosition: number; 
+  duration: number; 
+  delay: number; 
 }
 
 export const WalkingSnoopy = ({ startPosition, duration, delay }: WalkingSnoopyProps) => {
@@ -15,7 +15,6 @@ export const WalkingSnoopy = ({ startPosition, duration, delay }: WalkingSnoopyP
   const requestRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
 
-  // Función para mover a Snoopy
   useEffect(() => {
     if (isPaused) return;
 
@@ -41,7 +40,7 @@ export const WalkingSnoopy = ({ startPosition, duration, delay }: WalkingSnoopyP
   }, [startPosition, duration, delay, isPaused]);
 
   const handleClick = () => {
-    if (isAngry) return; // Evita múltiples clics
+    if (isAngry) return; 
     setIsAngry(true);
     setIsPaused(true);
 
@@ -79,4 +78,4 @@ export const WalkingSnoopy = ({ startPosition, duration, delay }: WalkingSnoopyP
     </div>
   );
 };
-
+ 
