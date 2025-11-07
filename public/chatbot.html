@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KarenPixelParty — Snoopy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Escena principal (simplificada) -->
+    <header class="title">🎉 FELIZ CUMPLEAÑOS KAREN 🎂</header>
+
+    <main class="stage">
+      <div class="doghouse" id="doghouse">
+        <img src="img/doghouse.png" alt="Doghouse" />
+      </div>
+
+      <!-- Frase de Snoopy -->
+      <div class="bubble" id="snoopyBubble">Hola Karen! Haz clic en la casita para hablar conmigo 🐶</div>
+
+      <!-- Botón para abrir chat (también abre al clicar la casita) -->
+      <button id="openChatBtn" class="pixel-btn">Hablar con Snoopy</button>
+
+      <!-- Canvas con snoopies animados (existente en tu proyecto) -->
+      <canvas id="scene"></canvas>
+    </main>
+
+    <!-- Panel de chat (oculto por defecto) -->
+    <div id="chatPanel" class="chat-panel hidden" role="dialog" aria-modal="true">
+      <div class="chat-header">
+        <span>Snoopy</span>
+        <button id="closeChat" class="close-btn">✕</button>
+      </div>
+      <div id="messages" class="messages"></div>
+
+      <form id="chatForm" class="chat-form">
+        <input id="inputMsg" type="text" autocomplete="off" placeholder="Escribe tu mensaje..." />
+        <button type="submit" class="pixel-btn">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
