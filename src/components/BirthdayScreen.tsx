@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Music, MessageCircle, Car } from "lucide-react";
+import { Music, MessageCircle } from "lucide-react";
 import snoopyHouse from "@/assets/snoopy-house.png";
 import cloud from "@/assets/cloud.png";
 import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Todo lo que haces con amor deja huella 💖",
-  "Snoopy dice: Cada día es una nueva oportunidad para brillar 🌞",
+  "Snoopy dice: Hoy es un buen día para creer en ti 🦋",
   "Snoopy dice: No tengas miedo de empezar de nuevo, es otra forma de avanzar 🌱",
   "Snoopy dice: Tu energía transforma todo a tu alrededor ✨",
   "Snoopy dice: La calma también es una forma de fuerza 🌿",
@@ -50,40 +49,53 @@ const phrases = [
   "Snoopy dice: Siempre hay algo por lo cual sonreír 🌞"
 ];
 
-const carta = "La vida se pone bonita cuando tú decides verla así. Haz las cosas con amor, priorízate, sé amable, enfócate y sigue adelante, pero jamás te rindas.";
-
+const carta = "Espero que te pasen cosas hermosas y cuando lo hagas, espero que te des cuenta de que eres digna de cada una de ellas. sigue siendo tu Karen";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null); // Nuevo estado para el audio
 
-  const getRandomPhrase = () => {
-    const audio = new Audio("audio/Voicy_Snoopy Sound 4.mp3");
-    audio.play().catch(() => {});
-    const availablePhrases = phrases.filter(p => p !== currentPhrase);
-    const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
-    setCurrentPhrase(randomPhrase);
-  };
+const getRandomPhrase = () => {
+  const audioEffect = new Audio("/audio/Voicy_Snoopy Sound 4.mp3");
+  audioEffect.play().catch(() => {});
 
+  // Filtra la frase actual para que no se repita
+  const availablePhrases = phrases.filter(p => p !== currentPhrase);
+  const randomPhrase = availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
+
+  // Actualiza el estado para que se muestre la nueva frase
+  setCurrentPhrase(randomPhrase);
+};
+
+  // useEffect para controlar la música de la carta especial
+  useEffect(() => {
+    if (showMessage) {
+      const bgAudio = new Audio("audio/CARTASOUND2.mp3"); // Tu audio de fondo
+      bgAudio.loop = true;
+      bgAudio.play().catch(() => {});
+      setAudio(bgAudio);
+    } else {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+        setAudio(null);
+      }
+    }
+  }, [showMessage]);
 
   const toggleMusic = () => {
-   useEffect(() => {
-  const audio = new Audio("audio/theyre-eating-the-dogs-snoopy-sound-track (1).mp3");
-  audio.loop = true;
-  audio.play().catch(() => {});
-  setIsPlaying(true);
-}, []);
-
-
-    // In a real implementation, you would control audio playback here
+    // Esta música de botón puedes dejarla igual
+    // Aquí solo manejas la música de la carta con useEffect
+    setIsPlaying(prev => !prev);
   };
 
   return (
     <div className="min-h-screen bg-pixel-sky relative overflow-hidden">
       <Confetti />
       
-      {/* Colorful banner flags */}
+      {/* Banner de banderines */}
       <div className="absolute top-0 left-0 right-0 h-16 flex justify-around items-start z-10">
         {["#FF6B6B", "#95E1D3", "#FF8B94", "#FFA07A", "#98D8C8", "#FFD93D", "#6BCF7F", "#A8DADC", "#B19CD9"].map((color, i) => (
           <div
@@ -94,14 +106,12 @@ export const BirthdayScreen = () => {
         ))}
       </div>
 
-      {/* Clouds */}
+      {/* Nubes */}
       <img src={cloud} alt="" className="absolute top-20 left-10 w-32 opacity-80 animate-float" style={{ imageRendering: "pixelated" }} />
       <img src={cloud} alt="" className="absolute top-32 right-20 w-40 opacity-70 animate-float" style={{ imageRendering: "pixelated", animationDelay: "1s" }} />
       <img src={cloud} alt="" className="absolute top-24 left-1/3 w-36 opacity-60 animate-float" style={{ imageRendering: "pixelated", animationDelay: "2s" }} />
 
-      {/* Main content */}
       <div className="relative z-20 pt-16 pb-8 px-4 max-w-4xl mx-auto">
-        {/* Title */}
         <h1 className="text-center text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-pixel mb-3 sm:mb-4 pixel-shadow animate-bounce-in leading-tight">
           🎉 FELIZ<br />CUMPLEAÑOS<br />KAREN 🎂
         </h1>
@@ -110,7 +120,7 @@ export const BirthdayScreen = () => {
           Hoy es un buen día para ser feliz ✨
         </p>
 
-        {/* Speech bubble - Now above Snoopy on mobile */}
+        {/* Burbuja de frases */}
         <div className="flex justify-center mb-4 sm:mb-6 px-4 animate-bounce-in" style={{ animationDelay: "0.3s" }}>
           <Card className="bg-card border-4 border-foreground pixel-shadow w-full max-w-sm p-4 sm:p-5 relative">
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-card" />
@@ -131,7 +141,7 @@ export const BirthdayScreen = () => {
           />
         </div>
 
-        {/* New phrase button */}
+        {/* Botón nueva frase */}
         <div className="flex justify-center mb-12 sm:mb-16">
           <Button
             onClick={getRandomPhrase}
@@ -141,16 +151,14 @@ export const BirthdayScreen = () => {
           </Button>
         </div>
 
+        {/* Mensaje sobre Snoopy */}
         <div>
           <p className="text-center text-accent text-xs sm:text-sm md:text-base font-pixel mb-6 sm:mb-8 animate-fade-in px-4"> No toques los Snoopy luego se enojan 😞</p>
         </div>
 
-        
-
-        {/* Walking Snoopy characters */}
+        {/* Walking Snoopy */}
         <div className="relative h-28 sm:h-32 md:h-40">
           <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 md:h-32 bg-pixel-grass border-t-4 border-foreground">
-            {/* Pixel flowers */}
             <div className="absolute bottom-2 left-[10%] text-lg sm:text-xl md:text-2xl">🌸</div>
             <div className="absolute bottom-2 sm:bottom-3 left-[25%] text-base sm:text-lg md:text-xl">🌼</div>
             <div className="absolute bottom-2 right-[15%] text-lg sm:text-xl md:text-2xl">🌸</div>
@@ -164,7 +172,7 @@ export const BirthdayScreen = () => {
         </div>
       </div>
 
-      {/* Control buttons */}
+      {/* Botones de control */}
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 flex gap-2 sm:gap-3 z-30">
         <Button
           onClick={() => setShowMessage(!showMessage)}
@@ -184,7 +192,7 @@ export const BirthdayScreen = () => {
         </Button>
       </div>
 
-      {/* Optional message overlay */}
+      {/* Carta especial */}
       {showMessage && (
         <div className="fixed inset-0 bg-foreground/50 flex items-center justify-center z-40 p-4" onClick={() => setShowMessage(false)}>
           <Card className="bg-card border-4 border-foreground pixel-shadow p-5 sm:p-6 md:p-8 max-w-sm sm:max-w-md mx-4">

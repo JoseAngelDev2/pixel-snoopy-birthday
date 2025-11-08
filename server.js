@@ -1,76 +1,84 @@
-// server.js - simple proxy example
-// npm i express node-fetch dotenv
-import express from 'express';
-import fetch from 'node-fetch';
-import dotenv from 'dotenv';
-dotenv.config();
+import express from "express";
+import fetch from "node-fetch";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
+dotenv.config();
 const app = express();
 app.use(express.json());
+
+// --- Configuración base ---
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Carpeta pública (donde está tu chatbot.html)
+app.use(express.static(path.join(__dirname, "public")));
+
+// --- Variables de entorno ---
 const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_URL =
+  process.env.GEMINI_API_URL ||
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent";
 
-// --- CONFIGURE: put your actual Gemini endpoint and model here ---
-const GEMINI_API_URL = process.env.GEMINI_API_URL || 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAiuWVZyVpV0M_ACtsOoP-onBZwKG7cM48'; // set in .env
+// --- Mensaje del sistema ---
+const SYSTEM_PROMPT = `
+Eres Snoopy, un asistente pícaro, amable y juguetón.
+Hablas con cariño a Karen 🐾, le ayudas con sus tareas y respondes en español con buen humor.
+`;
 
-// System prompt for Snoopy persona
-const SYSTEM_PROMPT = `You are "Snoopy", a friendly pixel-art assistant for Karen. 
-Respond kindly, playfully and helpfully. Keep answers concise and helpful for tasks, homework, reminders, and friendly chat. Avoid political, medical, legal advice.`;
+// --- Ruta principal (sirve chatbot.html) ---
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "chatbot.html"));
+});
 
-app.post('/api/chat', async (req, res) => {
+// --- Ruta de chat ---
+app.post("/api/chat", async (req, res) => {
   try {
-    const userMessage = req.body.message || '';
-    if(!userMessage) return res.status(400).json({error:'No message'});
+    const userMessage = req.body.message?.trim();
+    if (!userMessage) {
+      return res.status(400).json({ error: "No message" });
+    }
 
-    // Prepare request payload according to the Gemini/Gen API you are using.
-    // Replace this sample with the correct format for the API you're calling.
     const payload = {
-      model: GEMINI_MODEL,
-      messages: [
-        {role: 'system', content: SYSTEM_PROMPT},
-        {role: 'user', content: userMessage}
+      contents: [
+        {
+          role: "user",
+          parts: [{ text: `${SYSTEM_PROMPT}\n\n${userMessage}` }],
+        },
       ],
-      // optional params: temperature, maxTokens, etc.
     };
 
-    const apiRes = await fetch(GEMINI_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`
-      },
-      body: JSON.stringify(payload)
+    console.log("📩 Enviando a Gemini:", JSON.stringify(payload, null, 2));
+
+    const response = await fetch(`${GEMINI_API_URL}?key=${API_KEY}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
 
-    if(!apiRes.ok){
-      const text = await apiRes.text();
-      console.error('Gemini error', apiRes.status, text);
-      return res.status(500).json({error:'Error from Gemini', detail: text});
+    const data = await response.json();
+
+    console.log("📨 Respuesta de Gemini:", JSON.stringify(data, null, 2));
+
+    if (!response.ok || data.error) {
+      console.error("❌ Error en Gemini:", data);
+      return res.status(500).json({ error: "Gemini API error", detail: data });
     }
 
-    const apiJson = await apiRes.json();
+    const reply =
+      data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ||
+      "Ups... Snoopy no entendió 🐾";
 
-    // --- ADAPT: extract reply text depending on the response shape of your Gemini endpoint ---
-    // Many generative APIs return something like apiJson.choices[0].message.content or similar.
-    // Adjust the following lines to the actual response structure.
-    let reply = '';
-    if(apiJson?.choices && apiJson.choices[0]){
-      reply = apiJson.choices[0].message?.content || apiJson.choices[0].text || JSON.stringify(apiJson.choices[0]);
-    } else if(apiJson?.output?.[0]?.content){
-      // alternative shape
-      reply = apiJson.output.map(o=> o.content?.[0]?.text || '').join('\n');
-    } else {
-      reply = JSON.stringify(apiJson).slice(0,1000);
-    }
-
-    // Short small message to show on bubble
-    const short = reply.split('\n')[0].slice(0,80);
-    res.json({reply, short});
-  } catch(err){
-    console.error(err);
-    res.status(500).json({error:'Server error', detail: err.message});
+    res.json({ reply });
+  } catch (err) {
+    console.error("❌ Server error:", err);
+    res.status(500).json({ error: "Server error", detail: err.message });
   }
 });
 
-app.listen(PORT, ()=> console.log(`Server running on ${PORT}`));
+// --- Iniciar servidor ---
+app.listen(PORT, () =>
+  console.log(`🐾 Snoopy Server corriendo en http://localhost:${PORT}`)
+);
