@@ -49,8 +49,7 @@ const phrases = [
   "Snoopy dice: Siempre hay algo por lo cual sonreír 🌞"
 ];
 
-const carta = "Espero que te pasen cosas hermosas y cuando lo hagas, espero que te des cuenta de que eres digna de cada una de ellas. sigue siendo tu Karen";
-
+const carta = "Tú eres el proyecto más importante en tu vida. Reiníciate, reenfócate, vuelve a comenzar las veces que sea necesario. Pero jamás te rindas.";
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
