@@ -49,7 +49,7 @@ const phrases = [
   "Snoopy dice: Siempre hay algo por lo cual sonreír 🌞"
 ];
 
-const carta = "Que nunca se le olvide lo fuerte que erers y lo hermosa que estas. 💫";
+const carta = "Que nunca se le olvide lo fuerte que eres y lo hermosa que estas. 💫";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
