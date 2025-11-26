@@ -8,6 +8,7 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
+  "Snoopy dice: Eres un universo lleno de posibilidades ✨",
   "Snoopy dice: Tu paz interior vale más que cualquier prisa 🌿",
   "Snoopy dice: Lo que hoy parece pequeño mañana será un logro enorme 🌱",
   "Snoopy dice: Confía en lo que sientes, ahí vive tu verdad 💖",
@@ -33,7 +34,6 @@ const phrases = [
   "Snoopy dice: La paciencia siempre trae frutos dulces 🍯",
   "Snoopy dice: Suelta lo que pesa para que puedas volar más alto 🦋",
   "Snoopy dice: Lo mejor está creciendo en silencio para ti 🌾",
-  "Snoopy dice: Eres un universo lleno de posibilidades ✨",
   "Snoopy dice: Cuida tu energía como cuidarías un tesoro 🕊️",
   "Snoopy dice: Lo que es para ti sabrá encontrarte 🍃",
   "Snoopy dice: Hoy elige ser amable con tu propia historia 💞",
