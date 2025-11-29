@@ -39,8 +39,7 @@ const phrases = [
   "Snoopy dice: Hoy elige ser amable con tu propia historia 💞",
 ];
 
-
-const carta  = "Eres bonita, inteligente y única. No necesitas competir ni compararte con nadie, porque tú eres esa esencia que nadie más tiene 💫"
+const carta = "Tienes una luz propia que nadie puede replicar. Tu valor no se mide por otros, sino por la autenticidad y belleza que llevas dentro ✨";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
