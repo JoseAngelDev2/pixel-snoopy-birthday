@@ -8,6 +8,7 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
+  "Snoopy dice: Hoy es el día perfecto para hacer una pequeña cosa que te haga feliz 😊",
   "Snoopy dice: Acepta tu ritmo único, no es una carrera, es tu viaje 🗺️",
   "Snoopy dice: La gratitud es la memoria del corazón, recuérdala hoy 💖",
   "Snoopy dice: La felicidad se construye con pequeños momentos, no con grandes metas 🎈",
@@ -16,7 +17,6 @@ const phrases = [
   "Snoopy dice: Tu valor no depende de la aprobación de nadie más, solo de la tuya 👑",
   "Snoopy dice: Incluso en la quietud, algo maravilloso está germinando en ti 🌱",
   "Snoopy dice: No olvides la capacidad que tienes para empezar de cero, es un superpoder ✨",
-  "Snoopy dice: Hoy es el día perfecto para hacer una pequeña cosa que te haga feliz 😊",
   "Snoopy dice: La amabilidad que das es el eco que regresa a tu vida 🔄",
   "Snoopy dice: Los límites que crees tener son solo pensamientos que puedes reescribir ✍️",
   "Snoopy dice: Permite que la alegría sea tu estrategia de vida más fuerte 😄",
