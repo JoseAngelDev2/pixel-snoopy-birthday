@@ -8,40 +8,42 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Hoy respira profundo, lo estás haciendo mejor de lo que crees 🌤️",
-  "Snoopy dice: Avanza a tu paso, incluso lo lento también es progreso 🐾",
-  "Snoopy dice: Agradecer lo que tienes abre espacio para lo que viene 🙏",
-  "Snoopy dice: La calma también es una forma de valentía 🌊",
-  "Snoopy dice: Trátate con paciencia, estás aprendiendo 💛",
-  "Snoopy dice: Cada día trae una nueva oportunidad de intentarlo otra vez 🔁",
-  "Snoopy dice: No necesitas demostrar nada para ser suficiente 🌟",
-  "Snoopy dice: Confía en el proceso, incluso cuando no lo entiendas 🌙",
-  "Snoopy dice: Descansar también es avanzar 🛌",
-  "Snoopy dice: La paz comienza cuando dejas de exigirte tanto 🕊️",
-  "Snoopy dice: Tu esencia es más fuerte que cualquier duda 💪",
-  "Snoopy dice: Aprende a celebrar lo que ya has superado 🎉",
-  "Snoopy dice: Escúchate, tu intuición sabe más de lo que imaginas 🔍",
-  "Snoopy dice: A veces, lo mejor que puedes hacer es parar un momento ⏸️",
-  "Snoopy dice: Rodéate de lo que te haga sentir en casa 🏠",
-  "Snoopy dice: No todo tiene que resolverse hoy, y está bien 🗓️",
-  "Snoopy dice: Permítete sentir, todo sentimiento trae un mensaje 💭",
-  "Snoopy dice: Tu esfuerzo cuenta, incluso cuando nadie lo ve 👀",
-  "Snoopy dice: La tranquilidad también es una victoria 🏆",
-  "Snoopy dice: Suelta lo que pesa, tu corazón merece ligereza 🎈",
-  "Snoopy dice: Eres humano, no perfecto, y eso es suficiente 🤍",
-  "Snoopy dice: Cada paso consciente cambia tu camino 🚶‍♂️",
-  "Snoopy dice: La constancia supera a la motivación 🔑",
-  "Snoopy dice: Cree en ti incluso en los días nublados ☁️",
-  "Snoopy dice: Tu bienestar es una prioridad, no un lujo 🌿",
-  "Snoopy dice: Aprende a decir no sin sentir culpa 🚫",
-  "Snoopy dice: La claridad llega cuando te das tiempo 🧘",
-  "Snoopy dice: No te compares, tu proceso es único 🧩",
-  "Snoopy dice: La esperanza también se entrena 💫",
-  "Snoopy dice: Hoy es suficiente con dar lo mejor que puedas ☕"
+  "Snoopy dice: A veces solo necesitas un respiro y seguir 🌬️",
+  "Snoopy dice: Vas mejor de lo que piensas, confía 🐾",
+  "Snoopy dice: La tranquilidad también se aprende 🌙",
+  "Snoopy dice: Haz las paces con tu propio ritmo 🌿",
+  "Snoopy dice: No todo tiene que ser perfecto para ser valioso 🤍",
+  "Snoopy dice: Hoy date crédito por no rendirte ✨",
+  "Snoopy dice: Incluso los días simples tienen algo bueno ☁️",
+  "Snoopy dice: Escuchar tu corazón también es valentía 💛",
+  "Snoopy dice: Avanzar en silencio sigue siendo avanzar 🚶‍♀️",
+  "Snoopy dice: Permítete estar en calma sin explicaciones 🕊️",
+  "Snoopy dice: Tu esfuerzo deja huella, aunque no lo notes 🌱",
+  "Snoopy dice: No te apresures, todo llega a su tiempo ⏳",
+  "Snoopy dice: Está bien no tener todas las respuestas 🔍",
+  "Snoopy dice: Hoy cuida tu energía, es importante 🔋",
+  "Snoopy dice: A veces descansar es el mejor plan 🛌",
+  "Snoopy dice: Confía en lo que estás construyendo 🧱",
+  "Snoopy dice: La paz empieza cuando te aceptas tal cual 🌸",
+  "Snoopy dice: No te exijas más de lo necesario 💭",
+  "Snoopy dice: Cada pequeño paso cuenta 🌈",
+  "Snoopy dice: Sé amable contigo, también lo mereces 🤍",
+  "Snoopy dice: Tu calma es más fuerte que el ruido 🌊",
+  "Snoopy dice: Hoy también es un buen día para seguir 💫",
+  "Snoopy dice: Aprende a soltar lo que ya no suma 🎈",
+  "Snoopy dice: No te compares, tu historia es distinta 🧩",
+  "Snoopy dice: Respira, todo se va acomodando 🌬️",
+  "Snoopy dice: Estar bien contigo es un gran logro 🏆",
+  "Snoopy dice: No todo se ve, pero todo se siente 🤍",
+  "Snoopy dice: Date tiempo, te lo debes ⏸️",
+  "Snoopy dice: Hoy hazlo con calma, pero hazlo ☕",
+  "Snoopy dice: Eres suficiente tal como eres 🌟"
 ];
 
 
-const carta = "Hay personas que inspiran sin intentarlo… tú eres una de ellas 💖";
+
+const carta = "AHHHH MIRE A LA LUNA Y LAS ESTRELLAS PERO NO CREO QUE NINGUNA DE ELLAS BRILLE TANTO COMO TUUU SE A TAN LINDA COMO TUUU...";
+
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
