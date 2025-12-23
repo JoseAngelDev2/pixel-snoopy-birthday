@@ -42,8 +42,7 @@ const phrases = [
 
 
 
-const carta = "AHHHH MIRE A LA LUNA Y LAS ESTRELLAS PERO NO CREO QUE NINGUNA DE ELLAS BRILLE TANTO COMO TUUU SE A TAN LINDA COMO TUUU...";
-
+const carta = "Tu sonrisa tiene algo tranquilo que se siente bien, y sin darte cuenta se vuelve contagiosa. Me gusta cómo disfrutas tus cosas, como Snoopy o escuchar Monsta X, porque reflejan lo sencilla y auténtica que eres. Hablar contigo siempre deja una sensación bonita.";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
