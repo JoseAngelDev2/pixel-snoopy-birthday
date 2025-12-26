@@ -8,41 +8,31 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: A veces solo necesitas un respiro y seguir 🌬️",
-  "Snoopy dice: Vas mejor de lo que piensas, confía 🐾",
-  "Snoopy dice: La tranquilidad también se aprende 🌙",
-  "Snoopy dice: Haz las paces con tu propio ritmo 🌿",
-  "Snoopy dice: No todo tiene que ser perfecto para ser valioso 🤍",
-  "Snoopy dice: Hoy date crédito por no rendirte ✨",
-  "Snoopy dice: Incluso los días simples tienen algo bueno ☁️",
-  "Snoopy dice: Escuchar tu corazón también es valentía 💛",
-  "Snoopy dice: Avanzar en silencio sigue siendo avanzar 🚶‍♀️",
-  "Snoopy dice: Permítete estar en calma sin explicaciones 🕊️",
-  "Snoopy dice: Tu esfuerzo deja huella, aunque no lo notes 🌱",
-  "Snoopy dice: No te apresures, todo llega a su tiempo ⏳",
-  "Snoopy dice: Está bien no tener todas las respuestas 🔍",
-  "Snoopy dice: Hoy cuida tu energía, es importante 🔋",
-  "Snoopy dice: A veces descansar es el mejor plan 🛌",
-  "Snoopy dice: Confía en lo que estás construyendo 🧱",
-  "Snoopy dice: La paz empieza cuando te aceptas tal cual 🌸",
-  "Snoopy dice: No te exijas más de lo necesario 💭",
-  "Snoopy dice: Cada pequeño paso cuenta 🌈",
-  "Snoopy dice: Sé amable contigo, también lo mereces 🤍",
-  "Snoopy dice: Tu calma es más fuerte que el ruido 🌊",
-  "Snoopy dice: Hoy también es un buen día para seguir 💫",
-  "Snoopy dice: Aprende a soltar lo que ya no suma 🎈",
-  "Snoopy dice: No te compares, tu historia es distinta 🧩",
-  "Snoopy dice: Respira, todo se va acomodando 🌬️",
-  "Snoopy dice: Estar bien contigo es un gran logro 🏆",
-  "Snoopy dice: No todo se ve, pero todo se siente 🤍",
-  "Snoopy dice: Date tiempo, te lo debes ⏸️",
-  "Snoopy dice: Hoy hazlo con calma, pero hazlo ☕",
-  "Snoopy dice: Eres suficiente tal como eres 🌟"
+  "Snoopy dice: Tu sonrisa tiene una calma bonita 🫧",
+  "Snoopy dice: Tu proceso también merece respeto 🌱",
+  "Snoopy dice: A veces ir despacio es avanzar bien 🐾",
+  "Snoopy dice: No todo se resuelve hoy, y está bien 🌙",
+  "Snoopy dice: Escucha lo que tu cuerpo te pide 🤍",
+  "Snoopy dice: No te midas con la prisa de otros ⏳",
+  "Snoopy dice: Lo simple también puede ser suficiente ☁️",
+  "Snoopy dice: Permítete días tranquilos sin culpa 🕊️",
+  "Snoopy dice: Estás aprendiendo más de lo que crees 🌿",
+  "Snoopy dice: Tu calma también es fortaleza 🌊",
+  "Snoopy dice: Hoy cuida lo que sientes 💛",
+  "Snoopy dice: No todo tiene que ser entendido ahora 🔎",
+  "Snoopy dice: Date espacio para respirar 🌬️",
+  "Snoopy dice: Incluso el silencio también ayuda 🤍",
+  "Snoopy dice: Sigue a tu ritmo, no al ruido 🧭",
+  "Snoopy dice: Está bien bajar la velocidad 🐌",
+  "Snoopy dice: Tu bienestar es prioridad 🌸",
+  "Snoopy dice: No todo tiene que doler para valer ✨",
+  "Snoopy dice: Confía en lo que haces, paso a paso 🧩",
+  "Snoopy dice: Hoy también cuenta 🌟"
 ];
 
 
 
-const carta = "Tu sonrisa tiene algo tranquilo que se siente bien, y sin darte cuenta se vuelve contagiosa. me gusta cómo disfrutas tus cosas, como Snoopy o escuchar Monsta X, porque reflejan lo sencilla y auténtica que eres. hablar contigo siempre deja una sensación bonita.";
+const carta = "Tienes una forma tranquila de ser que se siente bien, y hablar contigo siempre deja algo bonito. Como Snoopy"
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
