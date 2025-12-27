@@ -8,31 +8,32 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Tu sonrisa tiene una calma bonita 🫧",
-  "Snoopy dice: Tu proceso también merece respeto 🌱",
-  "Snoopy dice: A veces ir despacio es avanzar bien 🐾",
-  "Snoopy dice: No todo se resuelve hoy, y está bien 🌙",
-  "Snoopy dice: Escucha lo que tu cuerpo te pide 🤍",
-  "Snoopy dice: No te midas con la prisa de otros ⏳",
-  "Snoopy dice: Lo simple también puede ser suficiente ☁️",
-  "Snoopy dice: Permítete días tranquilos sin culpa 🕊️",
-  "Snoopy dice: Estás aprendiendo más de lo que crees 🌿",
-  "Snoopy dice: Tu calma también es fortaleza 🌊",
-  "Snoopy dice: Hoy cuida lo que sientes 💛",
-  "Snoopy dice: No todo tiene que ser entendido ahora 🔎",
-  "Snoopy dice: Date espacio para respirar 🌬️",
-  "Snoopy dice: Incluso el silencio también ayuda 🤍",
-  "Snoopy dice: Sigue a tu ritmo, no al ruido 🧭",
-  "Snoopy dice: Está bien bajar la velocidad 🐌",
-  "Snoopy dice: Tu bienestar es prioridad 🌸",
-  "Snoopy dice: No todo tiene que doler para valer ✨",
-  "Snoopy dice: Confía en lo que haces, paso a paso 🧩",
-  "Snoopy dice: Hoy también cuenta 🌟"
+  "Snoopy dice: Tu presencia se siente ligera ☁️",
+  "Snoopy dice: Vas bien, incluso cuando dudas 🌿",
+  "Snoopy dice: No hace falta correr para llegar 🐾",
+  "Snoopy dice: Hay días para pausar, y también cuentan 🌙",
+  "Snoopy dice: Escucharte también es cuidarte 🤍",
+  "Snoopy dice: Tu ritmo es suficiente ⏳",
+  "Snoopy dice: Lo sencillo también abraza 🌱",
+  "Snoopy dice: Date permiso de estar tranquila 🕊️",
+  "Snoopy dice: Aprender también es avanzar 🌼",
+  "Snoopy dice: Tu calma dice mucho 🌊",
+  "Snoopy dice: Hoy elige lo que te haga bien 💛",
+  "Snoopy dice: No todo necesita respuesta hoy ✨",
+  "Snoopy dice: Respira, estás aquí 🌬️",
+  "Snoopy dice: El silencio también acompaña 🤍",
+  "Snoopy dice: Sigue siendo tú, sin prisa 🧭",
+  "Snoopy dice: Bajar el paso también es válido 🐌",
+  "Snoopy dice: Cuidarte es importante 🌸",
+  "Snoopy dice: No todo tiene que pesar ✨",
+  "Snoopy dice: Paso a paso es suficiente 🧩",
+  "Snoopy dice: Hoy también suma 🌟"
 ];
 
 
 
-const carta = "Tienes una forma tranquila de ser que se siente bien, y hablar contigo siempre deja algo bonito. Como Snoopy"
+const carta = "Eres como Snoopy, con una sonrisa que tiene algo bonito, de esos detalles que se notan sin hacer ruido ☁️";
+
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
