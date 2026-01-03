@@ -8,9 +8,6 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Revisa la carta especial y el video",
-  "Snoopy dice: Vas bien, incluso cuando dudas 🌿",
-  "Snoopy dice: No hace falta correr para llegar 🐾",
   "Snoopy dice: Hay días para pausar, y también cuentan 🌙",
   "Snoopy dice: Escucharte también es cuidarte 🤍",
   "Snoopy dice: Tu ritmo es suficiente ⏳",
@@ -31,8 +28,8 @@ const phrases = [
 ];
 
 
+const carta = "Algunas personas llegan sin prometer nada y terminan aportando más de lo esperado. Gracias por esos momentos como las llamadas JAJJAJA, cuando hablamos y el tiempo compartido. Pero algo importante es q esa rachita de 11 victorias no aumentara confia JAJAJAJAJA";
 
-const carta = "Karen, feliz Año Nuevo. quiero que sepas que me alegra muchísimo haberte conocido, y más aún que haya sido por Ome, de una forma tan rara  JAJAJA AME. todas esas llamadas, risas y momentos compartidos se convirtieron en recuerdos muy lindos que valoro de verdad. eres de esas personas que, sin darse cuenta, hicieron que este 2025 no fuera tan malo, y eso dice mucho de ti. gracias por estar, por escuchar y por hacer los días mas alegras, de mi parte, felicita a tu mamá, a tu papá, a Jordan y a tus hermanos en este nuevo año 🎉✨"; 
 
 
 export const BirthdayScreen = () => {
