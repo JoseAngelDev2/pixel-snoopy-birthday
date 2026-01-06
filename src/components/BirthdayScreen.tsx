@@ -8,29 +8,26 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Hay días para pausar, y también cuentan 🌙",
-  "Snoopy dice: Escucharte también es cuidarte 🤍",
-  "Snoopy dice: Tu ritmo es suficiente ⏳",
-  "Snoopy dice: Lo sencillo también abraza 🌱",
-  "Snoopy dice: Date permiso de estar tranquila 🕊️",
-  "Snoopy dice: Aprender también es avanzar 🌼",
-  "Snoopy dice: Tu calma dice mucho 🌊",
-  "Snoopy dice: Hoy elige lo que te haga bien 💛",
-  "Snoopy dice: No todo necesita respuesta hoy ✨",
-  "Snoopy dice: Respira, estás aquí 🌬️",
-  "Snoopy dice: El silencio también acompaña 🤍",
-  "Snoopy dice: Sigue siendo tú, sin prisa 🧭",
-  "Snoopy dice: Bajar el paso también es válido 🐌",
-  "Snoopy dice: Cuidarte es importante 🌸",
-  "Snoopy dice: No todo tiene que pesar ✨",
-  "Snoopy dice: Paso a paso es suficiente 🧩",
-  "Snoopy dice: Hoy también suma 🌟"
+  "Snoopy dice: A tu manera también está bien 🌙",
+  "Snoopy dice: Escuchar lo que sientes es importante 🤍",
+  "Snoopy dice: Tu proceso tiene valor ⏳",
+  "Snoopy dice: Lo simple también reconforta 🌱",
+  "Snoopy dice: Date un momento sin exigencias 🕊️",
+  "Snoopy dice: Aprender es parte del camino 🌼",
+  "Snoopy dice: La calma también es fortaleza 🌊",
+  "Snoopy dice: Hoy puedes ir con más suavidad 💛",
+  "Snoopy dice: No todo se resuelve de inmediato ✨",
+  "Snoopy dice: Respirar también es avanzar 🌬️",
+  "Snoopy dice: El silencio puede ser un refugio 🤍",
+  "Snoopy dice: Sé fiel a tu ritmo 🧭",
+  "Snoopy dice: Descansar también cuenta 🐌",
+  "Snoopy dice: Cuidarte es una forma de respeto 🌸",
+  "Snoopy dice: No todo tiene que doler ✨",
+  "Snoopy dice: Cada paso suma 🧩",
+  "Snoopy dice: Hoy también importa 🌟"
 ];
 
-
-const carta = "Algunas personas llegan sin prometer nada y terminan aportando más de lo esperado. Gracias por esos momentos como las llamadas JAJJAJA, cuando hablamos y el tiempo compartido. Pero algo importante es q esa rachita de 11 victorias no aumentara confia JAJAJAJAJA";
-
-
+const carta = "Me gusta cómo Snoopy resuelve las cosas: sin decir mucho, pero estando. De esa forma valoro los momentos que compartimos, las llamadas, los juegos y esos pequeños detalles que, sin darse cuenta, se vuelven importantes para mí.";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
