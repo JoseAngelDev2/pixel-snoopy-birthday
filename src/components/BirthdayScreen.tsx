@@ -27,7 +27,9 @@ const phrases = [
   "Snoopy dice: Hoy también importa 🌟"
 ];
 
-const carta = "Me gusta cómo Snoopy resuelve las cosas: sin decir mucho, pero estando. De esa forma valoro los momentos que compartimos, las llamadas, los juegos y esos pequeños detalles que, sin darse cuenta, se vuelven importantes para mí.";
+const carta = "Me hiciste reir asi que te recordare toda la vida 💫"
+
+
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
