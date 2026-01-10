@@ -25,7 +25,7 @@ const carta = "Siéntete bien contigo misma. No porque todo tu alrededor sea bue
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
-  const [isPlaying, setIsPlaying] = useState(false);Ñ
+  const [isPlaying, setIsPlaying] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
