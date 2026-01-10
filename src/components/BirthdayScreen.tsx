@@ -8,14 +8,6 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: A tu manera también está bien 🌙",
-  "Snoopy dice: Escuchar lo que sientes es importante 🤍",
-  "Snoopy dice: Tu proceso tiene valor ⏳",
-  "Snoopy dice: Lo simple también reconforta 🌱",
-  "Snoopy dice: Date un momento sin exigencias 🕊️",
-  "Snoopy dice: Aprender es parte del camino 🌼",
-  "Snoopy dice: La calma también es fortaleza 🌊",
-  "Snoopy dice: Hoy puedes ir con más suavidad 💛",
   "Snoopy dice: No todo se resuelve de inmediato ✨",
   "Snoopy dice: Respirar también es avanzar 🌬️",
   "Snoopy dice: El silencio puede ser un refugio 🤍",
@@ -27,13 +19,13 @@ const phrases = [
   "Snoopy dice: Hoy también importa 🌟"
 ];
 
-const carta = "Me hiciste reir asi que te recordare toda la vida 💫"
+const carta = "Siéntete bien contigo misma. No porque todo tu alrededor sea bueno, sino porque siempre puedes ver el lado positivo de las cosas que pasan, y eso es una de las cosas lindas que tienes. 💫"
 
 
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);Ñ
   const [showMessage, setShowMessage] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
