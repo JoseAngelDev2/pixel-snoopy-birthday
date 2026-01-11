@@ -8,7 +8,7 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: No todo se resuelve de inmediato ✨",
+  "Snoopy dice: Revisa el video de hoy ✨",
   "Snoopy dice: Respirar también es avanzar 🌬️",
   "Snoopy dice: El silencio puede ser un refugio 🤍",
   "Snoopy dice: Sé fiel a tu ritmo 🧭",
@@ -19,8 +19,7 @@ const phrases = [
   "Snoopy dice: Hoy también importa 🌟"
 ];
 
-const carta = "Siéntete bien contigo misma. No porque todo tu alrededor sea bueno, sino porque siempre puedes ver el lado positivo de las cosas que pasan, y eso es una de las cosas lindas que tienes. 💫"
-
+const carta = "No mereces un pàrrafo. Mereces mil libros escritos sobre lo extraordinaria que eres. 💫"
 
 
 export const BirthdayScreen = () => {
