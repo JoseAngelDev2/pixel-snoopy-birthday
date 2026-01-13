@@ -8,18 +8,20 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Revisa el video de hoy ✨",
-  "Snoopy dice: Respirar también es avanzar 🌬️",
-  "Snoopy dice: El silencio puede ser un refugio 🤍",
-  "Snoopy dice: Sé fiel a tu ritmo 🧭",
-  "Snoopy dice: Descansar también cuenta 🐌",
-  "Snoopy dice: Cuidarte es una forma de respeto 🌸",
-  "Snoopy dice: No todo tiene que doler ✨",
-  "Snoopy dice: Cada paso suma 🧩",
-  "Snoopy dice: Hoy también importa 🌟"
+  "Snoopy dice: A veces lo más bonito pasa sin hacer ruido 🤍",
+  "Snoopy dice: Sonríe, incluso cuando no te das cuenta 😊",
+  "Snoopy dice: Estar presente ya es suficiente 🌤️",
+  "Snoopy dice: Lo simple también puede ser especial 🐾",
+  "Snoopy dice: Hay belleza en tus pequeños gestos ✨",
+  "Snoopy dice: No tienes que demostrar nada hoy 🌙",
+  "Snoopy dice: Sentir también es una forma de avanzar 🌱",
+  "Snoopy dice: Lo cotidiano guarda magia 💫",
+  "Snoopy dice: Sé amable contigo, siempre 🤍"
 ];
 
-const carta = "No mereces un pàrrafo. Mereces mil libros escritos sobre lo extraordinaria que eres. 💫"
+
+const carta = "Una lástima que no puedas verte cuando sonríes, cuando hablas y haces todos esos gestos, cuando estás muy concentrada, cuando te emocionas con algo que te gusta, cuando te enojas o cuando duermes. Una lástima, porque te pierdes de los paisajes más hermosos 💫";
+
 
 
 export const BirthdayScreen = () => {
