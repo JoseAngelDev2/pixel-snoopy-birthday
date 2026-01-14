@@ -19,9 +19,7 @@ const phrases = [
   "Snoopy dice: Sé amable contigo, siempre 🤍"
 ];
 
-
-const carta = "Una lástima que no puedas verte cuando sonríes, cuando hablas y haces todos esos gestos, cuando estás muy concentrada, cuando te emocionas con algo que te gusta, cuando te enojas o cuando duermes. Una lástima, porque te pierdes de los paisajes más hermosos 💫";
-
+const carta = "Sin buscarlo, te volviste parte de mis días. De esos momentos simples que se quedan, de las conversaciones mas ramdom y las risas que llegan AMO. Gracias por estar y por ser como eres simplemente tu 💫";
 
 
 export const BirthdayScreen = () => {
