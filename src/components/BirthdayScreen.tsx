@@ -7,9 +7,7 @@ import cloud from "@/assets/cloud.png";
 import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
-const phrases = [
-  "Snoopy dice: A veces lo más bonito pasa sin hacer ruido 🤍",
-  "Snoopy dice: Sonríe, incluso cuando no te das cuenta 😊",
+const phrases = [git
   "Snoopy dice: Estar presente ya es suficiente 🌤️",
   "Snoopy dice: Lo simple también puede ser especial 🐾",
   "Snoopy dice: Hay belleza en tus pequeños gestos ✨",
