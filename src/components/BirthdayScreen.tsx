@@ -14,10 +14,20 @@ const phrases = [
   "Snoopy dice: No tienes que demostrar nada hoy 🌙",
   "Snoopy dice: Sentir también es una forma de avanzar 🌱",
   "Snoopy dice: Lo cotidiano guarda magia 💫",
-  "Snoopy dice: Sé amable contigo, siempre 🤍"
+  "Snoopy dice: Sé amable contigo, siempre 🤍",
+
+  "Snoopy dice: A veces descansar es la mejor decisión 🐌",
+  "Snoopy dice: Tu ritmo es válido, no lo apures 🧭",
+  "Snoopy dice: Incluso los días grises tienen propósito ☁️",
+  "Snoopy dice: No todo tiene que ser perfecto 🧩",
+  "Snoopy dice: Escuchar el silencio también cuenta 🎧",
+  "Snoopy dice: Pequeños pasos también son progreso 🐾",
+  "Snoopy dice: Está bien no tener todas las respuestas 🌊",
+  "Snoopy dice: Tu calma también es una victoria 🍃",
+  "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙"
 ];
 
-const carta = "Nunca encontré un amuleto de la suerto o un trébol de 5 hojas, pero esa vez en ome te encontré a ti entre millones de personas, asi q supongo que la suerte llega de varias formas. ✨";
+const carta = "Nunca encontré un amuleto de la suerte ni un trébol de cuatro hojas, pero esa vez en Ome te encontré a ti entre millones de personas, así que supongo que la suerte llega de muchas formas. ✨";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
