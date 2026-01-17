@@ -7,7 +7,7 @@ import cloud from "@/assets/cloud.png";
 import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
-const phrases = [git
+const phrases = [
   "Snoopy dice: Estar presente ya es suficiente 🌤️",
   "Snoopy dice: Lo simple también puede ser especial 🐾",
   "Snoopy dice: Hay belleza en tus pequeños gestos ✨",
@@ -17,7 +17,7 @@ const phrases = [git
   "Snoopy dice: Sé amable contigo, siempre 🤍"
 ];
 
-const carta = "No solo te ves hermosa, sino que tu forma de pensar es hermosa y unica, tu forma de hablar es muy bonita, y vives de la manera mas hermosa posible y es porque eres tu que con una sonrisa puedes alegrarle el dia a cualquiera como siempre lo haces conmigo 💫";
+const carta = "Podras estar lejos de mis ojos, pero aun asi eres capaz de hacerme sentir bien contigo, que cada dia, cada momento es unico y es algo tan grande que ni la distancia puede romper";
 
 
 export const BirthdayScreen = () => {
