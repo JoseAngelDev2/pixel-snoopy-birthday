@@ -17,8 +17,7 @@ const phrases = [
   "Snoopy dice: Sé amable contigo, siempre 🤍"
 ];
 
-const carta = "Podras estar lejos de mis ojos, pero aun asi eres capaz de hacerme sentir bien contigo, que cada dia, cada momento es unico y es algo tan grande que ni la distancia puede romper";
-
+const carta = "Podras estar lejos de mis ojos, pero aun asi eres capaz de hacerme sentir bien contigo, que cada dia, cada momento. Es unico y es algo tan grande que ni la distancia puede romper";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
