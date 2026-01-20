@@ -8,16 +8,17 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Estar presente ya es suficiente 🌤️",
-  "Snoopy dice: Lo simple también puede ser especial 🐾",
-  "Snoopy dice: Hay belleza en tus pequeños gestos ✨",
-  "Snoopy dice: No tienes que demostrar nada hoy 🌙",
-  "Snoopy dice: Sentir también es una forma de avanzar 🌱",
-  "Snoopy dice: Lo cotidiano guarda magia 💫",
-  "Snoopy dice: Sé amable contigo, siempre 🤍"
+  "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙",
+  "Snoopy dice: No todo tiene que ser perfecto 🧩",
+  "Snoopy dice: Escuchar el silencio también cuenta 🎧",
+  "Snoopy dice: Pequeños pasos también son progreso 🐾",
+  "Snoopy dice: Está bien no tener todas las respuestas 🌊",
+  "Snoopy dice: Tu calma también es una victoria 🍃",
+  "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙"
 ];
 
-const carta = "Nunca encontré un amuleto de la suerto o un trébol de 5 hojas, pero esa vez en ome te encontré a ti entre millones de personas, asi q supongo que la suerte llega de varias formas. ✨";
+
+const carta = "Si puediera describir lo que significas, para mi diria que eres todo lo que siempre soñe, lo que nuna imagine fue encontrar de casualidad, se convirtio en lo que mas quiero 💫💗";
 
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
