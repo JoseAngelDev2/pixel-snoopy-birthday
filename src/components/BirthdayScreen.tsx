@@ -17,7 +17,7 @@ const phrases = [
   "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙"
 ];
 
-const carta = "Ayer fue un dia muy especial para mi, quiero agradecerte por hacerme muy feliz. Mi corazon, Mi tiempo, Mi vida le pertenece quiero estar siempre a su lado. Eres tan hermosa e unica. 💞"
+const carta = "Ayer fue un dia muy especial para mi, quiero agradecerte por hacerme muy feliz. Mi corazon, Mi tiempo, Mi vida le pertenece quiero estar siempre a su lado. Eres tan hermosa e unica. Pero Aveces me detengo a pensar en como de tantas personas justo me encontre contigo el dia que nos conocimos, TODO CAMBIO. No se si algun dia pueda explicarte lo mucho que significas para mi 💞"
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
