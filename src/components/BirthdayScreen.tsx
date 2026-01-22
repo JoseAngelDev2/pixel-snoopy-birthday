@@ -8,14 +8,20 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙",
-  "Snoopy dice: No todo tiene que ser perfecto 🧩",
-  "Snoopy dice: Escuchar el silencio también cuenta 🎧",
-  "Snoopy dice: Pequeños pasos también son progreso 🐾",
-  "Snoopy dice: Está bien no tener todas las respuestas 🌊",
-  "Snoopy dice: Tu calma también es una victoria 🍃",
-  "Snoopy dice: Hoy hiciste lo que pudiste, y eso basta 🌙"
+  "Snoopy dice: Hoy fuiste suficiente, incluso en silencio 🌙",
+  "Snoopy dice: No correr también es avanzar 🐢",
+  "Snoopy dice: Descansar es parte del camino ☁️",
+  "Snoopy dice: No todo se arregla hoy, y está bien 🧩",
+  "Snoopy dice: A veces respirar es el mayor logro 🌬️",
+  "Snoopy dice: Tu ritmo es válido, no lo compares 🐾",
+  "Snoopy dice: Incluso los días grises cuentan 🌫️",
+  "Snoopy dice: No tienes que explicarte a todos 🍃",
+  "Snoopy dice: Ser amable contigo también es progreso 💛",
+  "Snoopy dice: Lo simple también puede sanar ✨",
+  "Snoopy dice: Hoy no fue perfecto, pero fue real 🌱",
+  "Snoopy dice: Mañana es otra oportunidad sin prisa 🌅"
 ];
+
 
 const carta = "Ayer fue un dia muy especial para mi, quiero agradecerte por hacerme muy feliz. Mi corazon, Mi tiempo, Mi vida le pertenece quiero estar siempre a su lado. Eres tan hermosa e unica. Pero Aveces me detengo a pensar en como de tantas personas justo me encontre contigo el dia que nos conocimos, TODO CAMBIO. No se si algun dia pueda explicarte lo mucho que significas para mi 💞"
 export const BirthdayScreen = () => {
