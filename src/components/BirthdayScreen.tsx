@@ -40,7 +40,7 @@ Te quiero mucho Karen 💞
 `;
 
 
-export function BirthdayKaren() {
+export function BirthdayScreen() {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
