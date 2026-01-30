@@ -30,8 +30,7 @@ Este pequeño mundo lo hice pensando en ti.
 En tu forma de sentir, por como eres,
 y de seguir incluso cuando parece difícil.
 
-Que Snoopy te recuerde hoy
-que eres la mejor lo que haces,
+Que Snoopy te recuerde hoy que eres la mejor,
 haces feliz a todos de tu alrededor sin notarlo,
 por como eres tan transparente, tierna y amable,
 y que eres más que suficiente tal como eres.
