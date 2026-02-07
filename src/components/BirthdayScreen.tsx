@@ -23,57 +23,42 @@ const phrases = [
 ];
 
 
-const carta = `
-Karen
+const carta = "Karen. Me encanta verla sonreír, sé que se lo repito mucho pero es algo que realmente me causa alegría mientras veo esa hermosa sonrisa, te juro que ese beso de recién me re encantó pero porfaaaa no apague la cámara que me encanta verla feliz sonriendo con esa sonrisa tan hermosa preciosaaaaaa AMO, te juro que te volviste parte de mi rutina. Eres una mujer maravillosa, que se esfuerza por todo lo que quiere conseguir un claro ej: Mi corazón ya se lo ganó es suyoo. Gracias por tenerme paciencia y ser tan linda conmigo me haces el hombre más feliz del mundo. Últimamente mis días son lindos contigo, Siempre espero con ansias hablar contigo, verla, apreciar a esa hermosa mujer qué historias re buenas. Karen me encantas, Karen te quiero, Karen Te AMO.";
 
-Este pequeño mundo lo hice pensando en ti.
-En tu forma de sentir, por como eres,
-y de seguir incluso cuando parece difícil.
-
-Que Snoopy te recuerde hoy que eres la mejor,
-haces feliz a todos de tu alrededor sin notarlo,
-por como eres tan transparente, tierna y amable,
-y que eres más que suficiente tal como eres.
-
-Te quiero mucho Karen 💞
-`;
-
-
-export function BirthdayScreen() {
+export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   const getRandomPhrase = () => {
-    const effect = new Audio("/audio/Voicy_Snoopy Sound 4.mp3");
-    effect.play().catch(() => {});
+    const audioEffect = new Audio("/audio/Voicy_Snoopy Sound 4.mp3");
+    audioEffect.play().catch(() => {});
 
-    const available = phrases.filter(p => p !== currentPhrase);
-    setCurrentPhrase(
-      available[Math.floor(Math.random() * available.length)]
-    );
+    const availablePhrases = phrases.filter((p) => p !== currentPhrase);
+    const randomPhrase =
+      availablePhrases[Math.floor(Math.random() * availablePhrases.length)];
+
+    setCurrentPhrase(randomPhrase);
   };
 
   useEffect(() => {
     if (showMessage) {
-      const bg = new Audio("/audio/CARTASOUND2.mp3");
-      bg.loop = true;
-      bg.play().catch(() => {});
-      setAudio(bg);
+      const bgAudio = new Audio("audio/CARTASOUND2.mp3");
+      bgAudio.loop = true;
+      bgAudio.play().catch(() => {});
+      setAudio(bgAudio);
     } else {
-      audio?.pause();
-      if (audio) audio.currentTime = 0;
-      setAudio(null);
-      setIsPlaying(false);
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+        setAudio(null);
+      }
     }
   }, [showMessage]);
 
   const toggleMusic = () => {
-    if (!audio) return;
-    if (isPlaying) audio.pause();
-    else audio.play().catch(() => {});
-    setIsPlaying(!isPlaying);
+    setIsPlaying((prev) => !prev);
   };
 
   return (
@@ -81,10 +66,17 @@ export function BirthdayScreen() {
       <Confetti />
 
       {/* Banner */}
-      <div className="absolute top-0 left-0 right-0 h-16 flex justify-around z-10">
+      <div className="absolute top-0 left-0 right-0 h-16 flex justify-around items-start z-10">
         {[
-          "#FF6B6B", "#95E1D3", "#FF8B94", "#FFA07A",
-          "#98D8C8", "#FFD93D", "#6BCF7F", "#A8DADC", "#B19CD9"
+          "#FF6B6B",
+          "#95E1D3",
+          "#FF8B94",
+          "#FFA07A",
+          "#98D8C8",
+          "#FFD93D",
+          "#6BCF7F",
+          "#A8DADC",
+          "#B19CD9",
         ].map((color, i) => (
           <div
             key={i}
@@ -95,46 +87,77 @@ export function BirthdayScreen() {
       </div>
 
       {/* Nubes */}
-      <img src={cloud} className="absolute top-20 left-10 w-32 opacity-80 animate-float" />
-      <img src={cloud} className="absolute top-32 right-20 w-40 opacity-70 animate-float" style={{ animationDelay: "1s" }} />
-      <img src={cloud} className="absolute top-24 left-1/3 w-36 opacity-60 animate-float" style={{ animationDelay: "2s" }} />
+      <img
+        src={cloud}
+        className="absolute top-20 left-10 w-32 opacity-80 animate-float"
+        style={{ imageRendering: "pixelated" }}
+      />
+      <img
+        src={cloud}
+        className="absolute top-32 right-20 w-40 opacity-70 animate-float"
+        style={{ imageRendering: "pixelated", animationDelay: "1s" }}
+      />
+      <img
+        src={cloud}
+        className="absolute top-24 left-1/3 w-36 opacity-60 animate-float"
+        style={{ imageRendering: "pixelated", animationDelay: "2s" }}
+      />
 
       <div className="relative z-20 pt-16 pb-8 px-4 max-w-4xl mx-auto">
-        <h1 className="text-center text-primary text-4xl font-pixel mb-4 animate-bounce-in">
-          🎉 FELIZ CUMPLEAÑOS KAREN 🎂
+        <h1 className="text-center text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-pixel mb-3 sm:mb-4 pixel-shadow animate-bounce-in leading-tight">
+          🎉 FELIZ<br />CUMPLEAÑOS<br />KAREN 🎂
         </h1>
 
-        <p className="text-center text-accent font-pixel mb-6">
+        <p className="text-center text-accent text-xs sm:text-sm md:text-base font-pixel mb-6 sm:mb-8 animate-fade-in px-4">
           Hoy es un buen día para ser feliz ✨
         </p>
 
         {/* Burbuja */}
-        <div className="flex justify-center mb-6">
-          <Card className="bg-card border-4 border-foreground pixel-shadow max-w-sm p-4 relative">
+        <div
+          className="flex justify-center mb-4 sm:mb-6 px-4 animate-bounce-in"
+          style={{ animationDelay: "0.3s" }}
+        >
+          <Card className="bg-card border-4 border-foreground pixel-shadow w-full max-w-sm p-4 sm:p-5 relative">
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-card" />
-            <p className="text-center font-pixel text-sm">{currentPhrase}</p>
+            <p className="text-foreground text-xs sm:text-sm font-pixel text-center">
+              {currentPhrase}
+            </p>
           </Card>
         </div>
 
-        {/* Snoopy */}
-        <div className="flex justify-center mb-8">
-          <img src={snoopyHouse} className="w-72 animate-bounce-in" />
+        {/* Snoopy grande */}
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <img
+            src={snoopyHouse}
+            className="w-56 sm:w-64 md:w-72 lg:w-80 mx-auto animate-bounce-in"
+            style={{ imageRendering: "pixelated", animationDelay: "0.5s" }}
+          />
         </div>
 
-        {/* Botón frase */}
-        <div className="flex justify-center mb-12">
-          <Button onClick={getRandomPhrase} className="font-pixel px-8 py-6">
+        {/* Botón nueva frase */}
+        <div className="flex justify-center mb-12 sm:mb-16">
+          <Button
+            onClick={getRandomPhrase}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-pixel text-xs sm:text-sm px-6 sm:px-8 py-5 sm:py-6 pixel-shadow hover:scale-105"
+          >
             ✚ Nueva frase
           </Button>
         </div>
 
-        <p className="text-center font-pixel mb-6">
+        <p className="text-center text-accent text-xs sm:text-sm md:text-base font-pixel mb-6 px-4">
           No toques los Snoopy luego se enojan 😞
         </p>
 
         {/* Walking Snoopy */}
-        <div className="relative h-32">
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-pixel-grass border-t-4 border-foreground" />
+        <div className="relative h-28 sm:h-32 md:h-40">
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-pixel-grass border-t-4 border-foreground">
+            <div className="absolute bottom-2 left-[10%]">🌸</div>
+            <div className="absolute bottom-2 left-[25%]">🌼</div>
+            <div className="absolute bottom-2 right-[15%]">🌸</div>
+            <div className="absolute bottom-2 right-[30%]">🌺</div>
+            <div className="absolute bottom-3 left-[50%]">🌼</div>
+          </div>
+
           <WalkingSnoopy startPosition={10} duration={15} delay={0} />
           <WalkingSnoopy startPosition={40} duration={20} delay={3} />
           <WalkingSnoopy startPosition={70} duration={18} delay={6} />
@@ -143,43 +166,74 @@ export function BirthdayScreen() {
 
       {/* Botones flotantes */}
       <div className="fixed bottom-4 right-4 flex gap-2 z-30">
-        <Button onClick={() => setShowMessage(true)} size="icon">
-          <MessageCircle />
+        <Button
+          onClick={() => setShowMessage(!showMessage)}
+          size="icon"
+          className="w-12 h-12 rounded-full bg-pixel-cloud border-3 border-foreground pixel-shadow"
+        >
+          <MessageCircle className="w-5 h-5 text-foreground" />
         </Button>
-        <Button onClick={toggleMusic} size="icon">
-          <Music />
+
+        <Button
+          onClick={toggleMusic}
+          size="icon"
+          className={`w-12 h-12 rounded-full border-3 border-foreground pixel-shadow ${
+            isPlaying ? "bg-primary" : "bg-primary/50"
+          }`}
+        >
+          <Music className="w-5 h-5 text-primary-foreground" />
         </Button>
       </div>
 
-      {/* Carta */}
+      {/* Carta + botón video */}
       {showMessage && (
         <div
-          className="fixed inset-0 bg-foreground/50 flex items-center justify-center z-40"
+          className="fixed inset-0 bg-foreground/50 flex items-center justify-center z-40 p-4"
           onClick={() => setShowMessage(false)}
         >
           <Card
-            className="bg-card border-4 border-foreground p-6 max-w-sm relative"
-            onClick={e => e.stopPropagation()}
+            className="relative bg-card border-4 border-foreground pixel-shadow p-6 max-w-sm mx-4 overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="font-pixel text-xl mb-4">💌 Mensaje especial</h2>
+            <img
+              src="/img/snoopy-bg.png"
+              className="absolute inset-0 w-full h-full object-contain opacity-20 pointer-events-none"
+              style={{ imageRendering: "pixelated" }}
+            />
 
-            <p className="font-pixel text-sm whitespace-pre-line mb-4">
-              {carta}
-            </p>
+            <div className="relative">
+              <h2 className="text-primary text-xl font-pixel mb-4">
+                💌 Mensaje especial
+              </h2>
 
-            <Button
-              className="w-full font-pixel"
-              onClick={() => {
-                audio?.pause();
-                setShowMessage(false);
-                window.open("/videos/video.mp4", "_blank");
-              }}
-            >
-              ▶ Ver video especial
-            </Button>
+             <div className="max-h-[45vh] overflow-y-auto pr-2 mb-4">
+  <p className="text-foreground text-sm font-pixel leading-relaxed">
+    {carta}
+  </p>
+</div>
+
+              {/* ⭐ BOTÓN NUEVO PARA VER VIDEO ⭐ */}
+              <Button
+  onClick={() => {
+    // 1️⃣ Pausar música si está activa
+    const bg = document.querySelector("audio");
+    if (bg) bg.pause();
+
+    // 2️⃣ Cerrar la carta
+    setShowMessage(false);
+
+    // 3️⃣ Abrir el video
+    window.open("/videos/video.mp4", "_blank");
+  }}
+  className="w-full bg-primary hover:bg-primary/80 text-primary-foreground font-pixel pixel-shadow"
+>
+  ▶ Ver video especial
+</Button>
+
+            </div>
           </Card>
         </div>
       )}
     </div>
   );
-}
+};
