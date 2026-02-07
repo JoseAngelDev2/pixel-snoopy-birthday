@@ -8,7 +8,7 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: Hoy fuiste suficiente, incluso en silencio 🌙",
+  "Revisa ig",
   "Snoopy dice: No correr también es avanzar 🐢",
   "Snoopy dice: Descansar es parte del camino ☁️",
   "Snoopy dice: No todo se arregla hoy, y está bien 🧩",
@@ -23,7 +23,7 @@ const phrases = [
 ];
 
 
-const carta = "My little fav, My consented, My princess, Te quiero muchoooo, Me encanta estar aqui contigo en llamada mientras la veo haciendo cualquier cosa porque se ve HERMOSAAAAA, tienes mucho talento eres simplemente una persona muy productivaaaaa, y que me da muchaaaa curiosidad QUIERO conocerla mas, ser parte de su mundo al igual que yo incluirla en el mio, te preguntas ¿Porque soy asi? Es que quiero dejarle claro cuanto la AMO, con esos hermosos ojos, la llame para poder apreciar esa carita tan hermosa que tiene y me mire con esos ojitos tan bellos y esa sonrisa tan hermosaaaa AMO. Te Quiero Mucho Karen. 💞"
+const carta = "My little fav, My consented, My princess, Te quiero muchoooo, Me encanta estar aqui contigo en llamada mientras la veo haciendo cualquier cosa porque se ve HERMOSAAAAA, tienes mucho talento eres simplemente una persona muy productivaaaaa, y que me da muchaaaa curiosidad QUIERO conocerla mas, ser parte de su mundo al igual que yo incluirla en el mio, te preguntas ¿Porque soy asi? Es que quiero dejarle claro cuanto la AMO, con esos hermosos ojos, la llame para poder apreciar esa carita tan hermosa que tiene y me mire con esos ojitos tan bellos y esa sonrisa tan hermosaaaa AMO. Te Quiero Mucho Karen. 💞 Revisa ig"
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
