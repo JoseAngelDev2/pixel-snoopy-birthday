@@ -21,7 +21,7 @@ const phrases = [
   "Snoopy dice: Mañana es otra oportunidad sin prisa 🌅"
 ];
 
-const carta = `Pues quiero que sepas que estos meses han sido de mis favoritos ¿porque? buneo me encanta estar contigo, escuchar como me cuentas tu dia, verla sonreir, ponerse el labial y simplemente saber que estas ahi. De verdad que haces mis dias muchisimo mejores.
+const carta = `Pues quiero que sepas que estos meses han sido de mis favoritos ¿porque? bueno me encanta estar contigo, escuchar como me cuentas tu dia, verla sonreir, ponerse el labial y simplemente saber que estas ahi. De verdad que haces mis dias muchisimo mejores.
 
 AMO cuando me habla, cuando me manda audios, cuando me cuenta algo que le emociona y hasta cuando se pone toda tierna porque me da demasiada ternura. Y bueno ya tu sabes que sigo pensando que tienes una sonrisa hermosaaa que cada vez que la veo me alegra automaticamente el dia.
 
