@@ -21,8 +21,14 @@ const phrases = [
   "Snoopy dice: Mañana es otra oportunidad sin prisa 🌅"
 ];
 
+const carta = `Pues quiero que sepas que estos meses han sido de mis favoritos ¿porque? buneo me encanta estar contigo, escuchar como me cuentas tu dia, verla sonreir, ponerse el labial y simplemente saber que estas ahi. De verdad que haces mis dias muchisimo mejores.
 
-const carta = "HOLAAA hermosaaa, pues vengo a confesarle cositas, pues la vdd estoy muy orgulloso de ti por ser alguien tan inteligente, independiente, tan amable, y pues espero que sigas manteniendo esa sonrisa tan hermosa que tienes me ENCANTA VERLA, tienes unos ojitos que si me sonries mientras me mmiras con esos ojitos tan lindos no se que hacer con tanta ternura y hermosura. Te quiero mucho, estoy muy feliz de estar contigo. Por eso le digo que obviamente sera algo dificil por el tema de la distancia y que ambos estaremos ocupados. Pero es trabajando en lo que queremos lograr, y eso me gusta yo quiero que tu logres lo que te propones ya que te esfuerzas por ellos te apoyo hermosa, y tmb obviamente tendremos tiempito para nosotros y ese momento sera mi parte fav del dia. Porque contigo se me olvida TODO simplemente me puedo relajar y escucharte. AMO cuando me habla, ODIO cuando el audio falla y no la entiendo por eso DIABLO, pero si yo te quiero muchisimo hermosa. Asi que sigue asi con lo que haces que confio mucho en ti. ❤"
+AMO cuando me habla, cuando me manda audios, cuando me cuenta algo que le emociona y hasta cuando se pone toda tierna porque me da demasiada ternura. Y bueno ya tu sabes que sigo pensando que tienes una sonrisa hermosaaa que cada vez que la veo me alegra automaticamente el dia.
+
+Tambien estoy muy orgulloso de ti porque sigues esforzandote por tus metas y por todo lo que quieres lograr. Y yo siempre voy a apoyarte en eso hermosa, porque confio muchisimo en ti y se todo lo que eres capaz de hacer.
+
+Obviamente hemos tenido dias ocupados y a veces no podemos hablar tanto como quisieramos, pero aun asi siempre encuentro la manera de pensar en ti JAJA. Y cada momento que pasamos juntos sigue siendo mi parte favorita del dia porque contigo me siento tranquilo, feliz y simplemente puedo ser yo.`;
+
 export const BirthdayScreen = () => {
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
