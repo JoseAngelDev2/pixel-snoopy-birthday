@@ -8,7 +8,7 @@ import { WalkingSnoopy } from "./WalkingSnoopy";
 import { Confetti } from "./Confetti";
 
 const phrases = [
-  "Snoopy dice: No correr también es avanzar 🐢",
+  "Snoopy dice: Holaaaaaa SOFIII",
   "Snoopy dice: Descansar es parte del camino ☁️",
   "Snoopy dice: No todo se arregla hoy, y está bien 🧩",
   "Snoopy dice: A veces respirar es el mayor logro 🌬️",
